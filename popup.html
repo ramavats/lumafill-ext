@@ -3,15 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Filler</title>
+    <title>Form Autofill Popup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: 300px;
+            padding: 20px;
+        }
+        .field {
+            margin-bottom: 15px;
+        }
+        .field label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .field input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .custom-fields {
+            margin-top: 20px;
+        }
+        .message {
+            margin-top: 15px;
+            color: green;
+        }
+    </style>
 </head>
 <body>
-    <h1>Form Filler</h1>
-    <form id="formFiller">
-        <label for="fieldName">Field Name:</label>
-        <input type="text" id="fieldName" required>
-        <button type="submit">Fill Form</button>
-    </form>
+
+    <h2>Autofill Form Data</h2>
+    <div class="field">
+        <label for="email">Email</label>
+        <input type="text" id="email" placeholder="Email">
+    </div>
+    <div class="field">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Full Name">
+    </div>
+    <div class="field">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" placeholder="Phone Number">
+    </div>
+    <div class="field">
+        <label for="telegram">Telegram</label>
+        <input type="text" id="telegram" placeholder="Telegram Username">
+    </div>
+    <div class="field">
+        <label for="twitter">Twitter</label>
+        <input type="text" id="twitter" placeholder="Twitter Handle">
+    </div>
+    <div class="field">
+        <label for="company">Company</label>
+        <input type="text" id="company" placeholder="Company Name">
+    </div>
+    <div class="field">
+        <label for="linkedin">LinkedIn</label>
+        <input type="text" id="linkedin" placeholder="LinkedIn Profile">
+    </div>
+    <div class="field">
+        <label for="designation">Designation</label>
+        <input type="text" id="designation" placeholder="Role">
+    </div>
+    <div class="field">
+        <label for="ordinals_address">Ordinals Address</label>
+        <input type="text" id="ordinals_address" placeholder="Ordinals Address">
+    </div>
+    
+    <button id="save">Save</button>
+    <button id="addCustomField">Add Custom Field</button>
+
+    <div class="custom-fields" id="customFieldsContainer"></div>
+    
+    <div class="message" id="saveMessage"></div> <!-- Message area for save status -->
+
     <script src="popup.js"></script>
 </body>
 </html>
